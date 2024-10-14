@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>myPyScript</title>
+  <link href="./css/pyStyle.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  <!--
+  <py-env>
+    - paths:
+        - directory_to_py_file
+        - ./assets/python/colors.py
+    - os
+   </py-env>
+   --> 
+</head>
+<body>
+  <b>📅 Today is <u><label id='today'></label></u></b>
+  <br>
+  <div id="pi" class="alert alert-primary"></div>
+  <py-script class="pythonCode">     
+    import datetime as dt
+      
+    pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
+  </py-script>
+ </body> 
+</html>
