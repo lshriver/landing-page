@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Eagle+Lake&family=MedievalSharp&family=Philosopher&family=UnifrakturMaguntia&display=swap');
+
+:root {
+  --color-white: #e2e2e2;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65; 
+  --color-darkpurple: rgba(84,58,183,1);
+  --color-greenblue: rgba(0,172,193,1);  
+  --color-lightpurple: #764ba2;
+  --color-lightorange: #f5ce62;
+  --color-pinkorange: #e43603;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+html, body {
+  height: 100%;
+  width: 100%; 
+  font-size: 20pt;
+  margin: 3;
+  background: linear-gradient(60deg, var(--color-greenblue) 0%, var(--color-darkpurple) 100%);
+  font-family: 'Aclonica', sans-serif;
+  color: var(--color-lightorange);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* pyScript */
+#pythonCode{
+  padding: 2rem 2rem;
+  border-radius: 3rem;
+  text-align: right;
+  font-size: 2rem;
+  font-family: 'Aclonica', sans-serif;
+  color: var(--color-white);
+}
