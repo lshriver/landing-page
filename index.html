@@ -1,48 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <title>Template</title>
-
-    <!-- Recommended meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.2/core.css">
-    <link href="./assets/css/style.css" rel="stylesheet" type="text/css"/>
-    <link href="./assets/css/buttons.css" rel="stylesheet" type="text/css"/>
-    <!-- <link href="./assets/css/linkColors.css" rel="stylesheet" type="text/css"/> -->
-    <link href="./assets/css/prettyText.css" rel="stylesheet" type="text/css"/>
-    <!-- This script tag bootstraps PyScript -->
-    <script type="module" src="https://pyscript.net/releases/2024.3.2/core.js"></script>
-      <!-- for splashscreen -->
-      <style>
-          #loading { outline: none; border: none; background: transparent }
-      </style> 
-      <link rel="icon" type="image/png" href="./assets/images/favicon.png"/>
-    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+  <link href="./assets/css/style.css" rel="stylesheet" type="text/css"/>
+  <link href="./assets/css/buttons.css" rel="stylesheet" type="text/css"/>
+  <link href="./assets/css/linkColors.css" rel="stylesheet" type="text/css"/>
+  <link href="./assets/css/prettyText.css" rel="stylesheet" type="text/css"/>
+  <!-- This script tag bootstraps PyScript -->
+        <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+  <!-- for splashscreen -->
+  <style>
+      #loading { outline: none; border: none; background: transparent }
+  </style> 
+  <title>eigenscribe</title>
+        <link rel="icon" type="image/png" href="./assets/images/favicon.png"/>
 </head>
-<body>
-  <div class="container">
-  <div class="item header">Pardon the Mess</div>
-  <div class="item sidebar">
-    <div class="buttons">
-        <button class="btn-hover color-1"><p>🗃️<a href="https://github.com/eigenscribe/eigenscribe">GitHub</a>🗃️</p></button>
-        <!-- <button class="btn-hover color-6"><p>🗂️<a href="https://gitlab.com/lshriver/gitlab-profile">GitLab</a>🗂️</p></button> -->
-        <!-- <button class="btn-hover color-3"><p>🌲<a href="https://linktr.ee/renzoscriber">LinkTree</a>🌲</p></button> -->
-        <button class="btn-hover color-6"><p>🔱<a href="https://replit.com/@eigenscribe">Replit</a>🔱</p></button>
-        <button class="btn-hover color-4"><p>🔷<a href="https://twitter.com/eigenscribe">Twitter</a>🔷</p></button>
-        
-        <button class="btn-hover color-5"><p>🌀<a href="https://dev.to/eigenscribe">DEV</a>🌀</p></button>
-        <button class="btn-hover color-3"><p>💄<a href="https://codepen.io/lshriver">Codepen</a>💄</p></button>
-      </div>  
-  </div>
-  <div class="item content-1">tbd</div>
-  <div class="item content-2">Content-2</div>
-  <div class="item content-3">Content-3</div>
-  <div class="item footer">Thank you for your patience.</div>
-</div>
 
-    <script albus></script>   
+<body>
+  <dialog id="loading">
+    <h1>Loading...</h1>
+  </dialog>
+
+  <nav class="navbar" style="background-color: #000000">
+            <div class="app-header">
+                <a href="/">
+                    <img src="./assets/images/logo.png" class="logo" />
+                </a>
+                <a class="title" href="" style="color: #f0ab3c">The Scriber Experience</a>
+            </div>
+  </nav>
+  
+ <section>
+<p>👋🏻 Welcome back 🌊</p>    
+ </section>   
+ <div class="buttons">
+    <button class="btn-hover color-1"><p>🗃️<a href="https://github.com/eigenscribe/eigenscribe">GitHub</a>🗃️</p></button>
+    <!-- <button class="btn-hover color-6"><p>🗂️<a href="https://gitlab.com/lshriver/gitlab-profile">GitLab</a>🗂️</p></button> -->
+    <!-- <button class="btn-hover color-3"><p>🌲<a href="https://linktr.ee/renzoscriber">LinkTree</a>🌲</p></button> -->
+    <button class="btn-hover color-6"><p>🔱<a href="https://replit.com/@eigenscribe">Replit</a>🔱</p></button>
+    <button class="btn-hover color-2"><p>📜<a href="https://www.reddit.com/r/ScriberExperience/">Reddit</a>📜</p></button>
+    <button class="btn-hover color-4"><p>🔷<a href="https://twitter.com/eigenscribe">Twitter</a>🔷</p></button>
+    <button class="btn-hover color-5"><p>🌀<a href="https://dev.to/eigenscribe">DEV</a>🌀</p></button>
+    <button class="btn-hover color-3"><p>💄<a href="https://codepen.io/lshriver">Codepen</a>💄</p></button>
+    <!-- <button class="bzn-hover color-7"><p>📄<a href="https://eigenscribe.github.io/myCV/">myCV</a>📄</p> -->
+        
+        
+ </div>  
+
+
+
+
+    
+    <section>
+        <blockquote>
+            📺 Channels:
+              <itemize>
+                  <ul>💜<a href="https://www.twitch.tv/renzoscriber">Twitch</a></ul>
+                  <ul>🍋<a href="https://www.dlive.tv/RenzoScriber">DLive</a></ul>
+              </itemize>           
+        </blockquote>
+    </section>
+    
+    <section class="pyscript">     
+        <blockquote>
+          <section>
+            <div>
+                <b>✅ To Do List</b>
+                <b> </b>
+            </div>
+            <div>
+                <input id="new-task-content" type="text" />
+                <button id="new-task-bin" type="submit" py-click="add_task">
+                    Add task
+                </button>
+            </div>
+
+            <div id="list-tasks-container"></div>
+
+            <template id="task-template">
+        <section class="task py-li-element">
+            <label class="flex items-center p-2">
+                <input style="vertical-align: middle;" type="checkbox" />
+                    <p style="display: inline; font-size: 12pt"></p>
+            </label>
+        </section>
+            </template>
+        </section>
+        
+     <script type="py" src="./main.py" config="./pyscript.toml"></script>
+      </blockquote>
+    </section> 
+    
+  <iframe src="./assets/pyscript.html" style="width:100%; height:270px;"></iframe>
+ 
+    
+
 </body>
+
+
 </html>
